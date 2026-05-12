@@ -1,0 +1,14 @@
+#para {
+    background-color: brown;
+    color: azure;
+    display: flex;
+    text-align: center;
+}
+
+h1 {
+    color: yellow;
+}
+
+.myclass {
+    background-color: blue;
+}

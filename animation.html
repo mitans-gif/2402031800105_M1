@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transform Animation</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: royalblue;
+
+            /* Animation */
+            animation: moveBox 3s infinite alternate;
+        }
+
+        @keyframes moveBox {
+            0% {
+                transform: translateX(0px) rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: translateX(150px) rotate(180deg) scale(1.3);
+            }
+
+            100% {
+                transform: translateX(0px) rotate(360deg) scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+</body>
+</html>

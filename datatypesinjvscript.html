@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types Example</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Data Types Example</h2>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+
+    <script>
+        var integerNumber = 10;
+        var floatNumber = 12.5;
+        var isJavaScriptEasy = true;
+
+        var student = {
+            name: "Mitansh",
+            age: 18,
+            city: "Ahmedabad"
+        };
+
+        var marks = [80, 90, 85, 95];
+
+        var message = "Welcome to JavaScript";
+
+        var emptyValue = null;
+
+        var notAssigned;
+
+        var a = 7;
+        var b = 6;
+
+        var multiplication = a * b;
+        var division = a / b;
+        var addition = a + b;
+        var subtraction = a - b;
+
+        document.getElementById("demo1").innerHTML =
+            "Integer Number: " + integerNumber;
+
+        document.getElementById("demo2").innerHTML =
+            "Floating Point Number: " + floatNumber;
+
+        document.getElementById("demo3").innerHTML =
+            "Boolean Value: " + isJavaScriptEasy;
+
+        document.getElementById("demo4").innerHTML =
+            "Object Value: Name = " + student.name +
+            ", Age = " + student.age +
+            ", City = " + student.city;
+
+        document.getElementById("demo5").innerHTML =
+            "Array Values: " + marks;
+
+        document.getElementById("demo6").innerHTML =
+            "String Value: " + message;
+
+        document.getElementById("demo7").innerHTML =
+            "Null Value: " + emptyValue;
+
+        document.getElementById("demo8").innerHTML =
+            "Undefined Value: " + notAssigned;
+
+        document.getElementById("demo9").innerHTML =
+            "Multiplication = " + multiplication +
+            ", Division = " + division;
+
+        document.getElementById("demo10").innerHTML =
+            "Addition = " + addition +
+            ", Subtraction = " + subtraction;
+    </script>
+
+</body>
+
+</html>

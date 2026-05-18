@@ -1,0 +1,41 @@
+<body>
+    Select Product:
+    <select id="product">
+        <option value="45000">AC</option>
+        <option value="22000">TV</option>
+        <option value="15000">Refrigerator</option>
+        <option value="70000">Laptop</option>
+    </select>
+
+    <br><br>
+
+    Net Price :
+    <input type="text" id="price">
+
+    <br><br>
+
+    Quantity :
+    <input type="text" id="quantity">
+
+    <br><br>
+
+    Total Amount :
+    <input type="text" id="amount">
+</body>
+
+<script>
+    var product = document.getElementById("product");
+    var quantity = document.getElementById("quantity");
+    var amount = document.getElementById("amount");
+    var price = document.getElementById("price");
+
+    // Show selected product price
+    product.addEventListener("change", () => {
+        price.value = product.value;
+    });
+
+    // Calculate total amount
+    amount.addEventListener("focus", () => {
+        amount.value = product.value * quantity.value;
+    });
+</script>

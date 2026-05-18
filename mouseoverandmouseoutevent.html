@@ -1,0 +1,15 @@
+<body>
+    <img src="off bulb.jpg" alt="" id="bulb">
+</body>
+
+<script>
+    var a = document.getElementById("bulb");
+
+    a.addEventListener("mouseover", () => {
+        a.src = "onbulb.jpg";
+    });
+
+    a.addEventListener("mouseout", () => {
+        a.src = "off bulb.jpg";
+    });
+</script>

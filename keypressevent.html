@@ -1,0 +1,12 @@
+<body>
+    <p>press any key to display Current date</p>
+    <input type="text" id="key">
+
+    <script>
+        var key=document.getElementById("key");
+        key.addEventListener("keypress",()=>{
+            var a =new Date();
+            alert(a);
+        });
+    </script>
+</body>

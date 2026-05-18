@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+
+<body>
+
+    <h2>Email Validation Using RegExp</h2>
+
+    <input type="text" id="myText" placeholder="Enter Email">
+
+    <button onclick="checkMail()">Check</button>
+
+    <script>
+        function checkMail() {
+
+            var a = document.getElementById("myText").value;
+
+            var pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+            if (pattern.test(a)) {
+                alert("Valid Email");
+            } else {
+                alert("Invalid Email");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

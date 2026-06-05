@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Date Objects</h1>
+    <p id="demo"></p>
+    <br>
+    <br>
+    
+    <script>
+        // function hello(){
+        //     document.write("hello how are you ?")
+        // }
+
+        // hello()
+
+
+        const welcome = (name)=>{
+            return `hello & Welcome ${name}`;
+        }
+        document.write(welcome("tarabhai<br>"));
+
+
+
+        document.write(`Math.PI = ${Math.PI}<br>`)
+
+        document.write(`${Math.pow(2,3)}<br>`);
+        document.write((Math.random()))
+        document.write()
+        
+
+
+        // DATE
+
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d;
+
+        var person = new Object();
+
+        person.firstName = "Rudra";
+        person.lastName = "patidar";
+
+        person.sayhi = () => {
+            alert("Welcome " +person.firstName+"  "+person.lastName)
+        }
+
+        // person.sayhi();
+
+        var person = {firstName:"tarabhai" , lastName:"patidar" , sayhi :function(){
+            alert("hi ! " + person.firstName + "   " + person.lastName);
+        }}
+person.sayhi();
+
+    </script>
+</body>
+</html>

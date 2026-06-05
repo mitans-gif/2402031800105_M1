@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+
+    <script>
+        function validate() {
+
+            var form1 = document.getElementById("RegForm");
+
+            var name = form1.Name.value;
+            var email = form1.Email.value;
+            var phone = form1.Telephone.value;
+            var what = form1.Subject;
+            var password = form1.Password.value;
+
+            var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var regPhone = /^\d{10}$/;
+
+            if (name == "") {
+                alert("Please Enter Your Name");
+                return false;
+            } else if (email == "" || !regEmail.test(email)) {
+                alert("Please enter a valid e-mail address.");
+                return false;
+            } else if (password == "") {
+                alert("Please enter your password");
+                return false;
+            } else if (password.length < 6) {
+                alert("Password should be at least 6 characters long");
+                return false;
+            } else if (phone == "" || !regPhone.test(phone)) {
+                alert("Please enter valid phone number.");
+                return false;
+            } else if (what.selectedIndex == 0) {
+                alert("Please select your course.");
+                return false;
+            }
+
+            alert("Form Submitted Successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form id="RegForm" onsubmit="return validate()">
+
+        <label>Name:</label><br>
+        <input type="text" name="Name"><br><br>
+
+        <label>Email:</label><br>
+        <input type="text" name="Email"><br><br>
+
+        <label>Phone Number:</label><br>
+        <input type="text" name="Telephone"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="Password"><br><br>
+
+        <label>Select Course:</label><br>
+        <select name="Subject">
+            <option value="">-- Select Course --</option>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="CE">CE</option>
+            <option value="ME">ME</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+
+</html>

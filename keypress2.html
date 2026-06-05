@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Table</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            width: 50%;
+        }
+        
+        td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        input,
+        button {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="rows" placeholder="Enter Rows">
+    <br>
+
+    <input type="text" id="cols" placeholder="Enter Cols">
+    <br>
+
+    <input type="button" value="Generate Table" id="btn1">
+
+    <div id="tableContainer"></div>
+
+    <script>
+        var rows = document.getElementById("rows");
+        var cols = document.getElementById("cols");
+        var btn1 = document.getElementById("btn1");
+
+        btn1.addEventListener("click", () => {
+
+            let table = "<table border='2'>";
+
+            for (let i = 0; i < rows.value; i++) {
+
+                table += "<tr>";
+
+                for (let j = 0; j < cols.value; j++) {
+
+                    table += "<td>[" + i + "][" + j + "]</td>";
+                }
+
+                table += "</tr>";
+            }
+
+            table += "</table>";
+
+            document.getElementById("tableContainer").innerHTML = table;
+        });
+    </script>
+
+</body>
+
+</html>
